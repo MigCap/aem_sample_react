@@ -4,7 +4,7 @@ import { ModelManager, Constants } from "@adobe/cq-spa-page-model-manager";
 import App from "./App";
 //include Mapped Components
 import "./components/MappedComponents";
-import "./index.css";
+import "./index.scss";
 
 function render(model) {
   ReactDOM.render(
