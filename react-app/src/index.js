@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { ModelManager, Constants } from "@adobe/cq-spa-page-model-manager";
 import App from "./App";
+//include Mapped Components
+import "./components/MappedComponents";
 import "./index.css";
 
 function render(model) {

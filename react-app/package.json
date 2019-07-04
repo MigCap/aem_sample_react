@@ -6,6 +6,7 @@
     "@adobe/cq-react-editable-components": "^1.1.0",
     "@adobe/cq-spa-component-mapping": "^1.0.3",
     "@adobe/cq-spa-page-model-manager": "^1.0.7",
+    "node-sass": "^4.12.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-fast-compare": "^2.0.4",
