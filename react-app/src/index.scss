@@ -9,7 +9,7 @@
 
 body {
   //font-weight: $normal;
-  background-color: darkgrey;
+  background-color: antiquewhite;
   font-family: $font-sans;
   margin: 0;
   padding: 0;
@@ -21,6 +21,11 @@ body {
   line-height: 1.5;
   line-height: 1.6;
   letter-spacing: 0.3px;
+
+  padding-top: $header-height-big;
+  @include media(mobile, tablet) {
+    padding-top: $header-height;
+  }
 }
 
 h1,

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { MapTo } from "@adobe/cq-react-editable-components";
-
+import './Image.scss'
 /**
  * Default Edit configuration for the Image component that interact with the Core Image component and sub-types
  *

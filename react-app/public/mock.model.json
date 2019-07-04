@@ -24,7 +24,7 @@
               },
               ":items": {
                 "text": {
-                  "text": "<h1>Mockup Json file</h1>\r\n",
+                  "text": "<h1>Mockup Json WKND_List</h1>\r\n",
                   "richText": true,
                   ":type": "wknd-events/components/content/text"
                 },
