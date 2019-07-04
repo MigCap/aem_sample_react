@@ -10,7 +10,7 @@ import {
   MapTo,
   withComponentMappingContext
 } from "@adobe/cq-react-editable-components";
-import "./Page.css";
+import "./Page.scss";
 // This component is a variant of a React Page component mapped to the "structure/page" resource type
 // No functionality is changed other than to add an app specific CSS class
 class WkndPage extends Page {
