@@ -24,7 +24,7 @@ const TextEditConfig = {
  */
 class Text extends Component {
   get richTextContent() {
-    return <div dangerouslySetInnerHTML={{ __html: this.props.text }} />;
+    return <div dangerouslySetInnerHTML={{ __html: this.props.text }} className="py-4" />;
   }
 
   get textContent() {
