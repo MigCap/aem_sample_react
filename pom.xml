@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!--
  |  Copyright 2015 Adobe Systems Incorporated
  |
@@ -21,13 +21,15 @@
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <description>WKND Events</description>
-
+    
     <modules>
         <module>core</module>
+        <!-- add React App -->
+        <module>react-app</module>
         <module>ui.apps</module>
         <module>ui.content</module>
     </modules>
-
+    
     <properties>
         <aem.host>localhost</aem.host>
         <aem.port>4502</aem.port>
@@ -37,11 +39,17 @@
         <sling.password>admin</sling.password>
         <vault.user>admin</vault.user>
         <vault.password>admin</vault.password>
-
+        
+        <!-- Update: Used by frontend-maven-plugin -->
+        <frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
+        <node.version>v10.16.0</node.version>
+        <npm.version>6.9.0</npm.version>
+        <!-- end update -->
+        
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
-
+    
     <build>
         <plugins>
             <!-- Maven Release Plugin -->
@@ -269,7 +277,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                         <ignore />
+                                        <ignore />
                                     </action>
                                 </pluginExecution>
                                 <pluginExecution>
@@ -300,24 +308,24 @@
             </plugins>
         </pluginManagement>
     </build>
-
+    
     <profiles>
         <!-- ====================================================== -->
         <!-- A D O B E   P U B L I C   P R O F I L E                -->
         <!-- ====================================================== -->
         <profile>
             <id>adobe-public</id>
-
+            
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
-
+            
             <properties>
                 <releaseRepository-Id>adobe-public-releases</releaseRepository-Id>
                 <releaseRepository-Name>Adobe Public Releases</releaseRepository-Name>
                 <releaseRepository-URL>https://repo.adobe.com/nexus/content/groups/public</releaseRepository-URL>
             </properties>
-
+            
             <repositories>
                 <repository>
                     <id>adobe-public-releases</id>
@@ -332,7 +340,7 @@
                     </snapshots>
                 </repository>
             </repositories>
-
+            
             <pluginRepositories>
                 <pluginRepository>
                     <id>adobe-public-releases</id>
@@ -348,7 +356,7 @@
                 </pluginRepository>
             </pluginRepositories>
         </profile>
-
+        
         <!-- Development profile: install only the bundle -->
         <profile>
             <id>autoInstallBundle</id>
@@ -383,7 +391,7 @@
                 </pluginManagement>
             </build>
         </profile>
-
+        
         <profile>
             <id>autoInstallPackage</id>
             <activation>
@@ -411,7 +419,7 @@
                 </pluginManagement>
             </build>
         </profile>
-
+        
         <profile>
             <id>autoInstallPackagePublish</id>
             <activation>
@@ -439,10 +447,10 @@
                 </pluginManagement>
             </build>
         </profile>
-
+        
     </profiles>
-
-
+    
+    
     <!-- ====================================================================== -->
     <!-- D E P E N D E N C I E S                                                -->
     <!-- ====================================================================== -->
@@ -488,12 +496,12 @@
                 <type>zip</type>
                 <version>2.3.2</version>
             </dependency>
-             <dependency>
+            <dependency>
                 <groupId>com.adobe.cq</groupId>
                 <artifactId>core.wcm.components.core</artifactId>
                 <version>2.3.2</version>
             </dependency>
-			 <!-- Jackson -->
+            <!-- Jackson -->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-annotations</artifactId>
@@ -511,16 +519,16 @@
                 <artifactId>jackson-core</artifactId>
                 <version>2.8.4</version>
                 <scope>provided</scope>
-			</dependency>
-			<!-- javax.inject 1 -->
+            </dependency>
+            <!-- javax.inject 1 -->
             <dependency>
                 <artifactId>geronimo-atinject_1.0_spec</artifactId>
                 <version>1.0</version>
                 <groupId>org.apache.geronimo.specs</groupId>
                 <scope>provided</scope>
-			</dependency>
-			 <!--  commons -->
-             <dependency>
+            </dependency>
+            <!--  commons -->
+            <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>3.5</version>
@@ -531,7 +539,7 @@
                 <artifactId>commons-collections4</artifactId>
                 <version>4.1</version>
                 <scope>provided</scope>
-			</dependency>
+            </dependency>
             <!-- Apache Sling Dependencies -->
             <dependency>
                 <groupId>org.apache.sling</groupId>
@@ -566,13 +574,13 @@
                 <version>5.7.4</version>
                 <scope>provided</scope>
             </dependency>
-			 <dependency>
+            <dependency>
                 <groupId>com.google.code.findbugs</groupId>
                 <artifactId>jsr305</artifactId>
                 <version>2.0.0</version>
                 <scope>provided</scope>
             </dependency>
-			
+            
             <!-- Testing -->
             <dependency>
                 <groupId>junit</groupId>
@@ -612,5 +620,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
+    
 </project>
