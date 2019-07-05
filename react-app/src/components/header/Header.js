@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.scss";
+import '../../utils/Icons'
 
 class Header extends Component {
   get homeLink() {
@@ -15,9 +17,9 @@ class Header extends Component {
     ) {
       return (
         <Link
-          className='Header-action text-warning font-weight-bold'
+          className='Header-action'
           to={this.props.navigationRoot + ".html"}>
-          Home
+          <FontAwesomeIcon icon='chevron-left' />
         </Link>
       );
     }
@@ -31,7 +33,7 @@ class Header extends Component {
           <h1 className='Header-title font-weight-bold py-3'>
             WKND<span className='Header-title--inverse'>_</span>
           </h1>
-          <div className='Header-tools py-3'>{this.homeLink}</div>
+          <div className='Header-tools py-2'>{this.homeLink}</div>
         </div>
       </header>
     );
