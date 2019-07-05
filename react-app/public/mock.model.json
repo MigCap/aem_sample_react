@@ -31,7 +31,7 @@
                 "image": {
                   "alt": "Alternative Text here",
                   "title": "This is a caption",
-                  "src": "/images/mock-image.jpeg",
+                  "src": "/images/mock-image2.jpeg",
                   "srcUriTemplate": "/content/wknd-events/react/home/_jcr_content/root/responsivegrid/image.coreimg{.width}.jpeg/1539196394835.jpeg",
                   "lazyEnabled": false,
                   "widths": [],

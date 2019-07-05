@@ -14,10 +14,9 @@
  
   &-caption {
     color: $color-white;
-    background-color: $color-black;
-    height: 3em;
+    background-color: darkslategray;
     position: relative;
-    padding: 20px 10px;
+    padding: 10px 10px;
     top: -10px;
     @include drop-shadow();
  

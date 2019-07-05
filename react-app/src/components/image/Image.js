@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { MapTo } from "@adobe/cq-react-editable-components";
-import './Image.scss'
+import "./Image.scss";
 /**
  * Default Edit configuration for the Image component that interact with the Core Image component and sub-types
  *
@@ -19,6 +19,13 @@ const ImageEditConfig = {
  *
  */
 class Image extends Component {
+  get caption() {
+    if (this.props.title && this.props.title.length > 0) {
+      return <span className='Image-caption'>{this.props.title}</span>;
+    }
+    return null;
+  }
+
   get content() {
     return (
       <img
@@ -30,7 +37,7 @@ class Image extends Component {
   }
 
   render() {
-    return <div className='Image'>{this.content}</div>;
+    return <div className='Image'>{this.content}{this.caption}</div>;
   }
 }
 
