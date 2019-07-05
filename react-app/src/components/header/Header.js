@@ -7,7 +7,7 @@ export default class Header extends Component {
       return (
       <header className="Header bg-primary">
           <div className="Header-wrapper">
-              <h1 className="Header-title">WKND<span className="Header-title--inverse">_</span></h1>
+              <h1 className="Header-title py-3">WKND<span className="Header-title--inverse">_</span></h1>
           </div>
         </header>
       );

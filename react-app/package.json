@@ -11,13 +11,16 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-fast-compare": "^2.0.4",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^3.0.1",
+    "react-styleguidist": "^9.1.11"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && clientlib --verbose",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "proxy": "http://localhost:4502",
   "eslintConfig": {

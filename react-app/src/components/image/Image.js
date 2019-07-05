@@ -1,3 +1,9 @@
+/*
+Image.js
+ 
+Maps to wknd-events/components/content/image
+*/
+
 import React, { Component } from "react";
 import { MapTo } from "@adobe/cq-react-editable-components";
 import "./Image.scss";
@@ -18,7 +24,7 @@ const ImageEditConfig = {
  * Image React Component
  *
  */
-class Image extends Component {
+export default class Image extends Component {
   get caption() {
     if (this.props.title && this.props.title.length > 0) {
       return <span className='Image-caption'>{this.props.title}</span>;
@@ -37,7 +43,12 @@ class Image extends Component {
   }
 
   render() {
-    return <div className='Image'>{this.content}{this.caption}</div>;
+    return (
+      <div className='Image'>
+        {this.content}
+        {this.caption}
+      </div>
+    );
   }
 }
 

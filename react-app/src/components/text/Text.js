@@ -23,7 +23,7 @@ const TextEditConfig = {
 /**
  * Text React component
  */
-class Text extends Component {
+export default class Text extends Component {
   get richTextContent() {
     return (
       <div
