@@ -6,6 +6,7 @@ Maps to wknd-events/components/content/text
 
 import React, { Component } from "react";
 import { MapTo } from "@adobe/cq-react-editable-components";
+import "./Text.scss";
 /**
  * Default Edit configuration for the Text component that interact with the Core Text component and sub-types
  *
@@ -24,7 +25,12 @@ const TextEditConfig = {
  */
 class Text extends Component {
   get richTextContent() {
-    return <div dangerouslySetInnerHTML={{ __html: this.props.text }} className="py-4" />;
+    return (
+      <div
+        dangerouslySetInnerHTML={{ __html: this.props.text }}
+        className='py-4'
+      />
+    );
   }
 
   get textContent() {
@@ -32,7 +38,11 @@ class Text extends Component {
   }
 
   render() {
-    return this.props.richText ? this.richTextContent : this.textContent;
+    let innercontent = this.props.richText
+      ? this.richTextContent
+      : this.textContent;
+
+    return <div className='Text'>{innercontent}</div>;
   }
 }
 
