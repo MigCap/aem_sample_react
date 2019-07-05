@@ -29,9 +29,9 @@ class ListItem extends Component {
             return null;
         }
         return (
-            <li className="ListItem" key={this.props.path}>
-                <Link className="ListItem-link" to={this.props.url}>{this.props.title}
-                    <span className="ListItem-date">{this.date}</span>
+            <li className="ListItem mb-2" key={this.props.path}>
+                <Link className="ListItem-link btn btn-block text-left" to={this.props.url}>{this.props.title}
+                    <span className="ListItem-date py-2">{this.date}</span>
                 </Link>
             </li>
         );
@@ -44,7 +44,7 @@ class ListItem extends Component {
 export default class List extends Component {
     render() {
         return (
-                <div className="List">
+                <div className="List ml-0 pl-0">
                     <ul className="List-wrapper">
                         { this.props.items && this.props.items.map((listItem, index) => {
                             return <ListItem path={listItem.path} url={listItem.url} 
