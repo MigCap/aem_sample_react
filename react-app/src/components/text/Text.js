@@ -28,7 +28,7 @@ export default class Text extends Component {
     return (
       <div
         dangerouslySetInnerHTML={{ __html: this.props.text }}
-        className='py-4'
+        className='py-3'
       />
     );
   }

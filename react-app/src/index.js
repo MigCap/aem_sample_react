@@ -5,6 +5,7 @@ import App from "./App";
 //include Mapped Components
 import "./components/MappedComponents";
 import { BrowserRouter } from "react-router-dom";
+import { Redirect, Route } from "react-router";
 import ScrollToTop from "./utils/RouteHelper";
 import "./index.scss";
 
@@ -12,6 +13,10 @@ function render(model) {
   ReactDOM.render(
     <BrowserRouter>
       <ScrollToTop>
+        <Route
+          path='/content/wknd-events/react.html'
+          render={() => <Redirect to='/content/wknd-events/react/home.html' />}
+        />
         <App
           cqChildren={model[Constants.CHILDREN_PROP]}
           cqItems={model[Constants.ITEMS_PROP]}

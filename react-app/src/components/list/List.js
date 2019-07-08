@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { MapTo } from "@adobe/cq-react-editable-components";
-import { Link } from "react-router-dom";
+import ListItem from "./ListItem";
 import "./List.scss";
 
 const ListEditConfig = {
@@ -12,49 +12,31 @@ const ListEditConfig = {
 };
 
 /**
- * ListItem renders the individual items in the list
- */
-class ListItem extends Component {
- 
-    get date() {
-       if(!this.props.date) {
-           return null;
-       }
-        let date = new Date(this.props.date);
-        return date.toLocaleDateString('en-US');
-    }
- 
-    render() {
-        if(!this.props.path || !this.props.title || !this.props.url) {
-            return null;
-        }
-        return (
-            <li className="ListItem mb-2" key={this.props.path}>
-                <Link className="ListItem-link btn btn-block text-left" to={this.props.url}>{this.props.title}
-                    <span className="ListItem-date py-2">{this.date}</span>
-                </Link>
-            </li>
-        );
-    }
-}
-
-/**
  * List renders the list contents and maps wknd-events/components/content/list
  */
 export default class List extends Component {
-    render() {
-        return (
-                <div className="List ml-0 pl-0">
-                    <ul className="List-wrapper">
-                        { this.props.items && this.props.items.map((listItem, index) => {
-                            return <ListItem path={listItem.path} url={listItem.url} 
-                                             title={listItem.title} date={listItem.lastModified} key={listItem.lastModified} />
-                            })
-                       }
-                    </ul>
-                </div>
-        );
-    }
+  render() {
+    console.log(this.props);
+
+    return (
+      <div className='List ml-0 pl-0'>
+        <ul className='List-wrapper'>
+          {this.props.items &&
+            this.props.items.map((listItem, index) => {
+              return (
+                <ListItem
+                  path={listItem.path}
+                  url={listItem.url}
+                  title={listItem.title}
+                  date={listItem.lastModified}
+                  key={listItem.lastModified}
+                />
+              );
+            })}
+        </ul>
+      </div>
+    );
+  }
 }
- 
+
 MapTo("wknd-events/components/content/list")(List, ListEditConfig);
