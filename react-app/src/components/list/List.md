@@ -15,6 +15,12 @@ let items = [
     path: "item2",
     title: "Second Article",
     lastModified: 1539532397436
+  },
+  {
+    url: "#",
+    path: "item3",
+    title: "Third Article",
+    lastModified: 1539532397445
   }
 ];
 <BrowserRouter>
