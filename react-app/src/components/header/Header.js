@@ -28,7 +28,7 @@ class Header extends Component {
 
   render() {
     return (
-      <header className='Header bg-primary'>
+      <header className='Header'>
         <div className='Header-wrapper'>
           <h1 className='Header-title font-weight-bold py-3'>
             <Link to={this.props.navigationRoot + ".html"}>

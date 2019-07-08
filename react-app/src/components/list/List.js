@@ -16,7 +16,6 @@ const ListEditConfig = {
  */
 export default class List extends Component {
   render() {
-    console.log(this.props);
 
     return (
       <div className='List ml-0 pl-0'>
