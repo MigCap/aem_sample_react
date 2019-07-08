@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.scss";
-import '../../utils/Icons'
+import "../../utils/Icons";
 
 class Header extends Component {
   get homeLink() {
@@ -31,7 +31,9 @@ class Header extends Component {
       <header className='Header bg-primary'>
         <div className='Header-wrapper'>
           <h1 className='Header-title font-weight-bold py-3'>
-            WKND<span className='Header-title--inverse'>_</span>
+            <Link to={this.props.navigationRoot + ".html"}>
+              WKND<span className='Header-title--inverse'>_</span>
+            </Link>
           </h1>
           <div className='Header-tools py-2'>{this.homeLink}</div>
         </div>

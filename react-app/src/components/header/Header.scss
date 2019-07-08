@@ -30,6 +30,13 @@ $icon-size-sm: 32px;
     @include media(tablet, desktop) {
       font-size: 30px;
     }
+
+    a {
+      color: azure;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 
   &-title--inverse {
