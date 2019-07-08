@@ -6,12 +6,13 @@
 
 .ListItem {
   list-style: none;
-  float: left;
   width: 100%;
-  font-size: $lead-font-size;
+  font-size: $small-font-size;
   padding: 10px;
+  color: $color-dark-blue;
   background-color: #ededed;
   border-radius: 10px;
+  // @include drop-shadow;
 
   &:hover {
     background-color: #dbd7d7;
@@ -19,12 +20,45 @@
 
   &-link {
     text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   &-date {
-    width: 100%;
-    float: left;
     color: $color-secondary;
     font-size: $base-font-size;
+  }
+}
+
+ul.pagination {
+  height: 70px;
+  background-color: #4a7aad;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  li {
+    a {
+      color: white;
+      cursor: pointer;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.active,
+.previous,
+.next {
+  background-color: #178ceb;
+  padding: 5px 15px;
+  border-radius: 50px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #62676b;
   }
 }

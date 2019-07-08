@@ -5,7 +5,7 @@ $icon-size-md: 40px;
 $icon-size-sm: 32px;
 
 .Header {
-  background-color: #8ca9c8;
+  background-color: #4a7aad;
   height: $header-height;
   width: 100%;
   position: fixed;
@@ -25,7 +25,6 @@ $icon-size-sm: 32px;
   &-title {
     font-family: "Helvetica";
     font-size: 20px;
-    float: left;
     padding-left: $gutter-padding;
 
     @include media(tablet, desktop) {
