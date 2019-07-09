@@ -58,7 +58,6 @@ export default class List extends Component {
 
   handlePageClick = data => {
     let selected = data.selected + 1;
-    console.log(selected);
     // let offset = Math.ceil(selected * this.props.perPage);
     this.getPageMockData(selected);
   };
@@ -69,7 +68,7 @@ export default class List extends Component {
     if (data) {
       return (
         <div className='List ml-0 pl-0 mb-5'>
-          <h4>Fetched from AEM</h4>
+          <h4>From AEM</h4>
 
           <ul className='List-wrapper'>
             {this.props.items &&
@@ -108,8 +107,8 @@ export default class List extends Component {
               breakLabel={"..."}
               breakClassName={"break-me"}
               pageCount={this.state.pageCount}
-              marginPagesDisplayed={2}
-              pageRangeDisplayed={3}
+              marginPagesDisplayed={1}
+              pageRangeDisplayed={2}
               onPageChange={this.handlePageClick}
               containerClassName={"pagination"}
               subContainerClassName={"pages pagination"}
@@ -118,9 +117,8 @@ export default class List extends Component {
           </div>
         </div>
       );
-    } else {
-      return <p>Loading ...</p>;
     }
+    return <p>Loading ...</p>;
   }
 }
 
