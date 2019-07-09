@@ -43,7 +43,9 @@ ul.pagination {
     a {
       color: white;
       cursor: pointer;
+      padding: 15px 20px;
       &:hover {
+        color: darkslateblue;
         text-decoration: none;
       }
     }
@@ -54,7 +56,6 @@ ul.pagination {
 .previous,
 .next {
   background-color: #178ceb;
-  padding: 5px 15px;
   border-radius: 50px;
 
   &:hover {
