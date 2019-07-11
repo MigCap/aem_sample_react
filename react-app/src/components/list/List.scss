@@ -50,16 +50,16 @@ ul.pagination {
       }
     }
   }
-}
 
-.active,
-.previous,
-.next {
-  background-color: #178ceb;
-  border-radius: 50px;
+  .active,
+  .previous,
+  .next {
+    background-color: #178ceb;
+    border-radius: 50px;
 
-  &:hover {
-    cursor: pointer;
-    background-color: #62676b;
+    &:hover {
+      cursor: pointer;
+      background-color: #62676b;
+    }
   }
 }

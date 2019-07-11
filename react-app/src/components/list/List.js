@@ -3,6 +3,7 @@ import { MapTo } from "@adobe/cq-react-editable-components";
 import ReactPaginate from "react-paginate";
 import ListItem from "./ListItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../../utils/Icons";
 import "./List.scss";
 
 const ListEditConfig = {
@@ -27,7 +28,6 @@ export default class List extends Component {
   }
 
   componentDidMount() {
-    // fetch("https://jsonplaceholder.typicode.com/photos?_start=0&_limit=5")
     this.getMockData();
   }
 

@@ -13,7 +13,7 @@ class App extends Page {
   render() {
     return (
       <div className='App'>
-        <Header navigationRoot='/content/wknd-events/react/home' />
+        <Header navigationRoot='/content/wknd-events/react/home' root='/content/wknd-events/react' />
         {this.childComponents}
         {this.childPages}
       </div>
