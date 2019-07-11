@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="nt:unstructured" jcr:title="Button" sling:resourceType="cq/gui/components/authoring/dialog" helpPath="https://www.adobe.com/go/aem_cmp_button_v1" trackingFeature="core-components:button:v1">
+    <content granite:class="cmp-button__editor" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/tabs" maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties jcr:primaryType="nt:unstructured" jcr:title="Properties" sling:resourceType="granite/ui/components/coral/foundation/container" margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns" margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <text jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldDescription="The text to display on the button." fieldLabel="Text" name="./buttonText" />
+                                            <link jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/coral/common/form/pagefield" fieldDescription="Link to a content page, external URL or page anchor." fieldLabel="Link" name="./buttonLink" />
+                                            <icon jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldDescription="Icon identifier for displaying an icon in the button." fieldLabel="Icon" name="./buttonIcon" />
+                                            <colour jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Button style" granite:class="link-colour" name="./buttonColour">
+                                                <granite:data jcr:primaryType="nt:unstructured" cq-dialog-showhide-target-value="true" />
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <primary jcr:primaryType="nt:unstructured" text="WNKD blue" value="primary" />
+                                                    <info jcr:primaryType="nt:unstructured" text="WNKD Light blue" value="info" />
+                                                    <warning jcr:primaryType="nt:unstructured" text="WNKD Yellow" value="warning" />
+                                                </items>
+                                            </colour>
+                                            <outline jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/checkbox" name="./buttonOutline" text="Outline button" value="true" />
+                                            <block jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/checkbox" name="./buttonBlock" text="Block button" value="true" />
+                                            <size jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Size" name="./buttonSize">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <small jcr:primaryType="nt:unstructured" text="Small" value="sm" />
+                                                    <default jcr:primaryType="nt:unstructured" selected="{Boolean}true" text="Default" value="m" />
+                                                    <large jcr:primaryType="nt:unstructured" text="Large" value="lg" />
+                                                </items>
+                                            </size>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

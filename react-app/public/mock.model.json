@@ -1,3 +1,4 @@
+// access to route.model.json to get mock json from AEM & add it to .env.development
 {
   "title": "React App",
   ":items": {},

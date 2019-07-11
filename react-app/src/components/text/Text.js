@@ -38,6 +38,7 @@ export default class Text extends Component {
   }
 
   render() {
+    // console.log(this.props);
     let innercontent = this.props.richText
       ? this.richTextContent
       : this.textContent;

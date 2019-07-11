@@ -18,8 +18,11 @@ $icon-size-sm: 32px;
 
   &-wrapper {
     @include content-area();
+    padding: 20px 0 0 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    align-content: center;
   }
 
   &-title {
@@ -41,11 +44,6 @@ $icon-size-sm: 32px;
 
   &-title--inverse {
     color: $color-white;
-  }
-
-  &-tools {
-    padding-top: 8px;
-    padding-right: $gutter-padding;
   }
 
   &-action {
